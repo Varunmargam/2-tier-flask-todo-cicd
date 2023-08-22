@@ -26,5 +26,10 @@ pipeline{
                 sh "docker-compose down && docker-compose up -d"
             }
         }
+        stage("Remove unused images"){
+            steps{
+                sh "docker image prune -af"
+            }
+        }
     }
 }
