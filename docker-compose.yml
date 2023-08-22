@@ -2,7 +2,7 @@ version: '3'
 services:
   
   backend:
-    image: "varunmargam/flask-todo-app-cicd"  # Use the image from DockerHub
+    image: "varunmargam/flask-todo-app-cicd:latest"  # Use the image from DockerHub
     ports:
       - "5000:5000"
     depends_on:
