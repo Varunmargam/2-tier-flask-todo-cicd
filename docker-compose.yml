@@ -2,15 +2,9 @@ version: '3'
 services:
   
   backend:
-    build:
-      context: .
+    image: "varunmargam/flask-todo-app-cicd"  # Use the image from DockerHub
     ports:
       - "5000:5000"
-    environment:
-      MYSQL_HOST: mysql
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root@123
-      MYSQL_DB: todo_db  # Create a new database for the to-do app
     depends_on:
       - mysql
 
